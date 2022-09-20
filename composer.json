@@ -1,0 +1,15 @@
+{
+    "name": "cemaytan/quotes",
+    "authors": [
+        {
+            "name": "RasimCem",
+            "email": "cemaytan_01@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CemAytan\\Quotes\\": "src/"
+        }
+    },
+    "require": {}
+}
