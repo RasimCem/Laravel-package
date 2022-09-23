@@ -1,7 +1,7 @@
 <?php
 return [
     "quotes" => [
-        "philosophy" => [
+        "/" => [
             [
                 "quote" => "The unexamined life is not worth living.",
                 "author" => "Socrates",
@@ -11,7 +11,7 @@ return [
                 "author" => "Martin Heidegger",
             ]
         ],
-        "science" => [
+        "/quote" => [
             [
                 "quote" => "What you learn from a life in science is the vastness of our ignorance.",
                 "author" => "David Eagleman",
@@ -21,6 +21,5 @@ return [
                 "author" => "Issac Newton",
             ]
         ]
-    ]
 ];
 
