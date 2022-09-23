@@ -21,5 +21,6 @@ return [
                 "author" => "Issac Newton",
             ]
         ]
+    ]
 ];
 
