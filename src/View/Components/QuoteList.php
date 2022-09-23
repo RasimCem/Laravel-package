@@ -12,7 +12,7 @@ class QuoteList extends Component
      *
      * @return void
      */
-    public function __construct(private string $pageName, private QuoteHandler $handler)
+    public function __construct(private QuoteHandler $handler)
     {
 
     }
@@ -24,10 +24,10 @@ class QuoteList extends Component
      */
     public function render()
     {
-        $quotes = $this->handler->getQuotes($this->pageName);
+        $quote = $this->handler->getRandomQuote(request()->getRequestUri());
 
         return view('quote::components.quote-list')->with([
-            'quotes' => $quotes
+            'quote' => $quote
         ]);
     }
 

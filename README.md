@@ -12,7 +12,7 @@ You can change quotes by using this config file at config/quotes.php . <br/>
 `php artisan vendor:publish`
 
 ### Usage
-Call the quotes component in any blade view you want with page name. Page names has to match with config/quotes.php .<br/>
-`<x-package-quote-list page-name="philosophy"/>`
+Call the quotes component in any blade view you want. Don't forget to specify uri on the config file.<br/>
+`<x-package-quote-list/>`
 
 

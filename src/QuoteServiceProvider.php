@@ -4,6 +4,7 @@ namespace CemAytan\Quotes;
 
 use CemAytan\Quotes\View\Components\QuoteList;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class QuoteServiceProvider extends ServiceProvider
@@ -26,9 +27,10 @@ class QuoteServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/quotes.php' => config_path('quotes.php'),
+            __DIR__.'/../config/quotes.php' => config_path('quotes.php')
         ]);
         $this->loadViewsFrom(__DIR__.'/resources/views', 'quote');
+
         $this->loadViewComponentsAs('package', [
             QuoteList::class
         ]);

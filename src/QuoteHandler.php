@@ -4,8 +4,13 @@ namespace CemAytan\Quotes;
 
 class QuoteHandler
 {
-    public function getQuotes(string $pageName)
+    public function getRandomQuote(string $uri)
     {
-        return config('quotes.quotes')[$pageName];
+        if (!isset(config('quotes.quotes')[$uri])) return null;
+        $quotes = config('quotes.quotes')[$uri];
+        $numberOfQuotes = count($quotes);
+        $randomIndex = rand(0, $numberOfQuotes-1);
+
+        return $numberOfQuotes > 0 ? $quotes[$randomIndex] : null;
     }
 }
