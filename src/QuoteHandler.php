@@ -18,7 +18,7 @@ class QuoteHandler
 
     public function getQuoteByApi(string $uri)
     {
-        if (!isset(config('quotes.quotes')[$uri])) return null;
+        if (!isset(config('quotes.categories')[$uri])) return null;
         $category = config('quotes.categories')[$uri];
 
         return (new QuotesService())->getByCategory($category);
