@@ -24,7 +24,7 @@ class QuoteList extends Component
      */
     public function render()
     {
-        $quote = $this->handler->getRandomQuote(request()->getRequestUri());
+        $quote = $this->handler->getQuoteByApi(request()->getRequestUri());
 
         return view('quote::components.quote-list')->with([
             'quote' => $quote
