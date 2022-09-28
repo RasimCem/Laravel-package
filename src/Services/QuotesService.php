@@ -13,7 +13,7 @@ class QuotesService
      */
     public function getByCategory(string $category)
     {
-        $url = sprintf('%s/v1/quotes?category=%s', config('quotes.quotes-api-base-url'), $category);
+        $url = sprintf('%s/v1/quotes?category=%s', config('quotes.api-base-url'), $category);
         $response = Http::withHeaders([
             'X-Api-Key' => config('quotes.quotes-api-key')
         ])->get($url);
